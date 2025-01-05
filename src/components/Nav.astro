@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components'
+import navData from '../data/navData'
+---
+
+<nav aria-label="Primary">
+  <div class="navbar">
+    <a href="/" class="logomark" aria-label="Home">
+        <!-- <Icon name="logomark" width="60" /> -->
+         <image src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" style="height: 25px; background-color: aliceblue;"/>
+    </a>
+    <ul>
+        {
+            navData?.map((item)=>(
+                <a href={item?.path}>{item?.name}</a>
+            ))
+        }
+    </ul>
+  </div>
+</nav>
